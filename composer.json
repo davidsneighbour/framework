@@ -1,6 +1,6 @@
 {
 	"name": "davidsneighbour/colossus-wp-options-framework",
-	"description": "Colossus WP Options Framework allows theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options with just a few simple lines of code.",
+	"description": "A framework to allow theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options.",
 	"keywords": ["wordpress", "framework", "options"],
 	"homepage" : "https://github.com/davidsneighbour/colossus-wp-options-framework",
 	"license": "GPL-2.0-or-later",
@@ -26,8 +26,6 @@
 	"autoload": {
 		"files": ["titan-framework.php"]
 	},
-	"repositories": [
-	],
 	"require": {
 		"php": "7.*"
 	},
