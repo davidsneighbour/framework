@@ -51,7 +51,7 @@
       "web": "http://www.gambit.ph/"
     }
   ],
-  "license": "GPLv2",
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/davidsneighbour/colossus-wp-options-framework/issues"
   },
