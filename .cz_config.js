@@ -1,3 +1,4 @@
+// jshint ignore: start
 'use strict';
 
 // see https://github.com/leonardoanalista/cz-customizable
