@@ -1,20 +1,17 @@
-/**
- * WordPress standards from https://develop.svn.wordpress.org/trunk/.jshintrc
- */
-
 {
 	"boss": true,
 	"curly": true,
 	"eqeqeq": true,
 	"eqnull": true,
-	"es3": true,
+	"esversion": 3,
 	"expr": true,
 	"immed": true,
 	"noarg": true,
+	"nonbsp": true,
 	"onevar": true,
 	"quotmark": "single",
 	"trailing": true,
-	"undef": true, // This reports `console` in `console.log()` as an error
+	"undef": true,
 	"unused": true,
 
 	"browser": true,
@@ -24,6 +21,9 @@
 		"Backbone": false,
 		"jQuery": false,
 		"JSON": false,
-		"wp": false
+		"wp": false,
+		"export": false,
+		"module": false,
+		"require": false
 	}
 }
