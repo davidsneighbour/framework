@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/davidsneighbour/colossus-wp-options-framework.svg?branch=master)](https://travis-ci.com/davidsneighbour/colossus-wp-options-framework)
+[![Build Status](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework.svg?branch=main)](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework)
 [![Slack](https://img.shields.io/badge/slack-colossus--talk.slack.com-blue)](https://colossus-talk.slack.com)
 
 <!--
