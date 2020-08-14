@@ -1,47 +1,39 @@
 os: linux
 dist: xenial
 language: php
-
-# PHP version used in first build configuration.
 php:
-    - "7.4"
-    - "7.3"
-    - "7.2"
-
-# WordPress version used in first build configuration.
+- '7.4'
+- '7.3'
+- '7.2'
 env:
-    - WP_VERSION=latest WP_MULTISITE=0
-    - WP_VERSION=latest WP_MULTISITE=1
-    - WP_VERSION=5.4.2 WP_MULTISITE=0
-    - WP_VERSION=5.4.2 WP_MULTISITE=1
-    - WP_VERSION=5.5 WP_MULTISITE=0
-    - WP_VERSION=5.5 WP_MULTISITE=1
-
+- WP_VERSION=latest WP_MULTISITE=0
+- WP_VERSION=latest WP_MULTISITE=1
+- WP_VERSION=5.4.2 WP_MULTISITE=0
+- WP_VERSION=5.4.2 WP_MULTISITE=1
+- WP_VERSION=5.5 WP_MULTISITE=0
+- WP_VERSION=5.5 WP_MULTISITE=1
 services:
-    - mysql
-
+- mysql
 install:
-    - npm install
-    - composer require --dev phpunit/phpunit ^7
-
-# Clones WordPress and configures our testing environment.
+- npm install
+- composer require --dev phpunit/phpunit ^7
 before_script:
-    - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-    - export PLUGIN_SLUG=$(basename $(pwd))
-    - cd ..
-    - mv $PLUGIN_SLUG "/tmp/wordpress/wp-content/plugins/$PLUGIN_SLUG"
-    - cd "/tmp/wordpress/wp-content/plugins/$PLUGIN_SLUG"
-
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- export PLUGIN_SLUG=$(basename $(pwd))
+- cd ..
+- mv $PLUGIN_SLUG "/tmp/wordpress/wp-content/plugins/$PLUGIN_SLUG"
+- cd "/tmp/wordpress/wp-content/plugins/$PLUGIN_SLUG"
 script:
-    - ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
-
+- "./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover"
 after_success:
-    - wget https://scrutinizer-ci.com/ocular.phar
-    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-
+- wget https://scrutinizer-ci.com/ocular.phar
+- php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 cache:
-    apt: true
-    directories:
-        - $HOME/.npm
-        - vendor
-        - $HOME/.composer/cache
+  apt: true
+  directories:
+  - "$HOME/.npm"
+  - vendor
+  - "$HOME/.composer/cache"
+notifications:
+  slack:
+    secure: MsJa/yxlNk6dg5nvENq+i4+e0aLOT4LHWtch/PJJCppZvfF47I42YYsLZn8GEZY3fNAk9mfvEB0WM/ezeaDIFd/L2PuFQQ1TCOGwYNqWtEAiN3pmbiYcCpufmQJOUZ+tn1Pi3bw1Eq8YkKgpOZbUP7RvMaLJ8wJ2yDeprYAkwxb4etZZob3yWiYPixh6JrQnbOzKNvooAUDaiP4ocuxVfcYv5JLko2bqBkkmt1VEXyrqbYeYIzsM7IThN8V/319hA3/GbW1eK3MOalgUHKo9UuvwCJ/GVlVOz30gwSpKzMpr2PDG0s+xAPlG5RD1/pywrVreIOUillib43+gJMa87/pfWfUaKmvqf+/Hne5X0kB/IjcEdsjHWoJ8/0N7LgIarD//r2kzWk2aZUJqgnq0XJXjD7NiODQiwhhrG9WCozZg9rISoAtA3TPY8ZY/BH8rSXpcJCqMvbqLxFmHNrp90PHPG8Smv1cszIRDdeVZRO5GaqCvgV/SPnwxlvaQuUMRgm7A9BghBwn2FsT0/ExLMAU/6dsOMkkcG5FxiDATlxCeHwgzYdlmnwzw++IJcPsihST4vSlacnM7HzGIWDP99XUrm7wE7sC66vC/0h22Npa0aD4cnkGC56WU8iXCP/HovuQZCUQ9ijZ+rBKlHMBgkCqlu1yC1Y8mXJtzRpgeDDE=
