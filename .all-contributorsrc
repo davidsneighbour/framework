@@ -11,13 +11,12 @@
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "goodwinpress",
-      "name": "Alex Goodwin",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/8179689?v=4",
-      "profile": "http://goodwinpress.ru",
+      "login": "davidsneighbour",
+      "name": "Patrick Kollitsch",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/83281?v=4",
+      "profile": "https://davids-neighbour.com",
       "contributions": [
-        "bug",
-        "code"
+        "maintainer"
       ]
     },
     {
@@ -32,12 +31,13 @@
       ]
     },
     {
-      "login": "davidsneighbour",
-      "name": "Patrick Kollitsch",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/83281?v=4",
-      "profile": "https://davids-neighbour.com",
+      "login": "goodwinpress",
+      "name": "Alex Goodwin",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8179689?v=4",
+      "profile": "http://goodwinpress.ru",
       "contributions": [
-        "maintainer"
+        "bug",
+        "code"
       ]
     },
     {
