@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework.svg?branch=main)](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework)
-[![Slack](https://img.shields.io/badge/slack-colossus--talk.slack.com-blue)](https://colossus-talk.slack.com)
+[![Slack](https://img.shields.io/badge/slack-colossus--talk.slack.com-blue)](https://colossus-slack.herokuapp.com/)
 
 <!--
 [![WordPress](https://img.shields.io/wordpress/v/titan-framework.svg)]()
