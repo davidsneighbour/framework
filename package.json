@@ -72,7 +72,7 @@
     "gulp-ignore": "1.2.1",
     "gulp-imagemin": "2.3.0",
     "gulp-include": "2.0.2",
-    "gulp-jshint": "1.11.2",
+    "gulp-jshint": "1.12.0",
     "gulp-minify-css": "1.2.1",
     "gulp-notify": "2.2.0",
     "gulp-prompt": "0.1.2",
