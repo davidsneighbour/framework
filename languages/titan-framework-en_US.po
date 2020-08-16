@@ -1,32 +1,35 @@
 # Copyright (C) 2018 Titan Framework
 # This file is distributed under the same license as the Titan Framework package.
+# Translators:
+# Patrick Kollitsch <patrick@davids-neighbour.com>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Titan Framework\n"
 "Report-Msgid-Bugs-To: http://titanframework.net\n"
+"PO-Revision-Date: 2020-08-13 14:36+0000\n"
+"Last-Translator: Patrick Kollitsch <patrick@davids-neighbour.com>, 2020\n"
+"Language-Team: English (United States) (https://www.transifex.com/davidsneighbour/teams/112525/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: en_US\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: lib/class-admin-page.php:119
 msgid ""
-"<em>Options Page Created with <a href='http://titanframework.net?"
-"utm_source=admin&utm_medium=admin footer'>Titan Framework</a></em>"
+"<em>Options Page Created with <a "
+"href='http://titanframework.net?utm_source=admin&utm_medium=admin "
+"footer'>Titan Framework</a></em>"
 msgstr ""
-"<em>Options Page Created with <a href='http://titanframework.net?"
-"utm_source=admin&utm_medium=admin footer'>Titan Framework</a></em>"
+"<em>Options Page Created with <a "
+"href='http://titanframework.net?utm_source=admin&utm_medium=admin "
+"footer'>Titan Framework</a></em>"
 
 #: lib/class-admin-page.php:365
 msgid "Settings saved."
@@ -36,11 +39,11 @@ msgstr "Settings saved."
 msgid "Settings reset to default."
 msgstr "Settings reset to default."
 
-#: lib/class-customizer.php:33, lib/class-meta-box.php:37
+#: lib/class-customizer.php33, lib/class-meta-box.php:37
 msgid "More Options"
 msgstr "More Options"
 
-#: lib/class-option-ajax-button.php:30, lib/class-option-ajax-button.php:33
+#: lib/class-option-ajax-button.php30, lib/class-option-ajax-button.php:33
 msgid "Security check failed, please refresh the page and try again."
 msgstr "Security check failed, please refresh the page and try again."
 
@@ -86,11 +89,11 @@ msgstr ""
 msgid "Entering your license key is mandatory to get the product updates."
 msgstr "Entering your license key is mandatory to get the product updates."
 
-#: lib/class-option-enable.php:62, lib/class-option-enable.php:141
+#: lib/class-option-enable.php62, lib/class-option-enable.php:141
 msgid "Enabled"
 msgstr "Enabled"
 
-#: lib/class-option-enable.php:65, lib/class-option-enable.php:144
+#: lib/class-option-enable.php65, lib/class-option-enable.php:144
 msgid "Disabled"
 msgstr "Disabled"
 
@@ -102,19 +105,19 @@ msgstr "Select File"
 msgid "Use file"
 msgstr "Use file"
 
-#: lib/class-option-gallery.php:143, lib/class-option-upload.php:271
+#: lib/class-option-gallery.php143, lib/class-option-upload.php:271
 msgid "Select Image"
 msgstr "Select Image"
 
-#: lib/class-option-gallery.php:146, lib/class-option-upload.php:274
+#: lib/class-option-gallery.php146, lib/class-option-upload.php:274
 msgid "Use image"
 msgstr "Use image"
 
-#: lib/class-option-multicheck-pages.php:28,
-#: lib/class-option-multicheck-pages.php:49,
-#: lib/class-option-multicheck-posts.php:35,
-#: lib/class-option-multicheck-posts.php:61,
-#: lib/class-option-select-pages.php:34, lib/class-option-select-posts.php:42
+#: lib/class-option-multicheck-pages.php28,
+#: lib/class-option-multicheck-pages.php49,
+#: lib/class-option-multicheck-posts.php35,
+#: lib/class-option-multicheck-posts.php61,
+#: lib/class-option-select-pages.php34, lib/class-option-select-posts.php:42
 msgid "Untitled %s"
 msgstr "Untitled %s"
 
@@ -130,9 +133,9 @@ msgstr "Reset to Defaults"
 msgid "Are you sure you want to reset ALL options to their default values?"
 msgstr "Are you sure you want to reset ALL options to their default values?"
 
-#: lib/class-option-select-categories.php:35,
-#: lib/class-option-select-pages.php:27,
-#: lib/class-option-select-post-types.php:27,
+#: lib/class-option-select-categories.php35,
+#: lib/class-option-select-pages.php27,
+#: lib/class-option-select-post-types.php27,
 #: lib/class-option-select-posts.php:36
 msgid "Select"
 msgstr "Select"
