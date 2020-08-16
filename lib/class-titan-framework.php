@@ -326,8 +326,13 @@ class TitanFramework {
 
 		// Run this first to ensure that adminOptions carries all our admin page options.
 		$this->getInternalAdminOptions();
+		if (is_multisite()){
+			update_site_option( $this->optionNamespace . '_options', serialize( $this->adminOptions ) );
+		} else {
+			update_option( $this->optionNamespace . '_options', serialize( $this->adminOptions ) );
+		}
 
-		update_option( $this->optionNamespace . '_options', serialize( $this->adminOptions ) );
+
 		do_action( 'tf_save_options_' . $this->optionNamespace );
 		return $this->adminOptions;
 	}

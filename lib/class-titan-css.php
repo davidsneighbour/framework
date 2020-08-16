@@ -326,7 +326,11 @@ class TitanFrameworkCSS {
 		} else {
 			// If we were NOT able to save our generated CSS, save our CSS
 			// as an option, we'll load that in wp_head in a hook
-			update_option( $this->getCSSSlug(), $cssString );
+			if (is_multisite()){
+				update_site_option( $this->getCSSSlug(), $cssString );
+			} else {
+				update_option( $this->getCSSSlug(), $cssString );
+			}
 		}
 	}
 

@@ -163,7 +163,11 @@ class TitanFrameworkPlugin {
 			if ( false !== $index && 0 !== $index ) {
 				array_splice( $plugins, $index, 1 );
 				array_unshift( $plugins, TF_PLUGIN_BASENAME );
-				update_option( 'active_plugins', $plugins );
+				if (is_multisite()){
+					update_site_option( 'active_plugins', $plugins );
+				} else {
+					update_option( 'active_plugins', $plugins );
+				}
 			}
 		}
 
