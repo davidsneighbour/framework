@@ -89,7 +89,7 @@
     "gulp-watch": "4.3.5",
     "gulp-wp-pot": "1.0.3",
     "gulp-zip": "3.0.2",
-    "jshint-stylish": "2.0.1",
+    "jshint-stylish": "2.2.1",
     "merge-stream": "1.0.0"
   },
   "config": {
