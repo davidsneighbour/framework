@@ -69,7 +69,7 @@
     "gulp-debug": "2.1.0",
     "gulp-group-css-media-queries": "1.2.2",
     "gulp-if": "1.2.5",
-    "gulp-ignore": "1.2.1",
+    "gulp-ignore": "3.0.0",
     "gulp-imagemin": "2.3.0",
     "gulp-include": "2.0.2",
     "gulp-jshint": "1.12.0",
