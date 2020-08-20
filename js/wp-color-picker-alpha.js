@@ -4,9 +4,9 @@
  * Overwrite Automattic Iris for enabled Alpha Channel in wpColorPicker
  * Only run in input and is defined data alpha in true
  *
- * Version: 2.1.3
+ * Version: 2.1.4
  * https://github.com/kallookoo/wp-color-picker-alpha
- * Licensed under the GPLv2 license.
+ * Licensed under the GPLv2 license or later.
  */
 ( function( $ ) {
 	// Prevent double-init.
@@ -21,7 +21,7 @@
 		_wrap = '<div class="wp-picker-container" />',
 		_button = '<input type="button" class="button button-small" />',
 		// Prevent CSS issues in < WordPress 4.9
-		_deprecated = ( wpColorPickerL10n.current !== undefined && wpColorPickerL10n.clearAriaLabel !== undefined && wpColorPickerL10n.defaultAriaLabel !== undefined );
+		_deprecated = ( wpColorPickerL10n.current !== undefined );
 		// Declare some global variables when is deprecated or not
 		if ( _deprecated ) {
 			var _before = '<a tabindex="0" class="wp-color-result" />';
@@ -99,31 +99,19 @@
 					.attr( 'title', wpColorPickerL10n.pick )
 					.attr( 'data-current', wpColorPickerL10n.current );
 				self.pickerContainer = $( _after ).insertAfter( el );
-
 				self.button          = $( _button ).addClass('hidden');
 			} else {
-				// console.log(el.parent( 'label' ).length);
 				/*
 				 * Check if there's already a wrapping label, e.g. in the Customizer.
 				 * If there's no label, add a default one to match the Customizer template.
 				 */
-				 // el.wrap( _wrappingLabel );
-				 // self.wrappingLabelText = $( _wrappingLabelText )
-				 // 	.insertBefore( el )
-					// .text( wpColorPickerL10n.defaultLabel );
 				if ( ! el.parent( 'label' ).length ) {
-
 					// Wrap the input field in the default label.
 					el.wrap( _wrappingLabel );
 					// Insert the default label text.
 					self.wrappingLabelText = $( _wrappingLabelText )
 						.insertBefore( el )
 						.text( wpColorPickerL10n.defaultLabel );
-				} else {
-					el.wrap( _wrappingLabel );
-					// // self.wrappingLabelText = $( _wrappingLabelText )
-					// 	.insertBefore( el )
-						// .text( wpColorPicke	rL10n.defaultLabel );
 				}
 
 				/*
@@ -212,7 +200,7 @@
 
 						self.toggler.find( 'span.color-alpha' ).css( {
 							'width'                     : '30px',
-							'height'                    : '24px',
+							'height'                    : '100%',
 							'position'                  : 'absolute',
 							'top'                       : 0,
 							'left'                      : 0,
@@ -332,6 +320,7 @@
 					if ( $.isFunction( self.options.clear ) )
 						self.options.clear.call( this, event );
 
+					self.element.trigger( 'change' );
 				} else if ( $( this ).hasClass( 'wp-picker-default' ) ) {
 					self.element.val( self.options.defaultColor ).change();
 				}
@@ -467,6 +456,7 @@
 					self._change();
 				} );
 			}
+			el.trigger( 'change' );
 		},
 		_addInputListeners: function( input ) {
 			var self            = this,
