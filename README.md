@@ -54,7 +54,7 @@ php composer.phar create-project gambitph/titan-framework titan-framework
 ```
 -->
 
-(See the Wiki for full details)[https://github.com/davidsneighbour/colossus-wp-options-framework/wiki].
+[See the Wiki for full details](https://github.com/davidsneighbour/colossus-wp-options-framework/wiki).
 
 ## Developing
 
