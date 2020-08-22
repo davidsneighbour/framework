@@ -39,7 +39,9 @@ Colossus WP Options Framework (aka Colossus WP) allows theme and plugin develope
 
 ## Installing
 
-1. You can install the latest stable release from the [wordpress.org plugin page](https://wordpress.org/plugins/colossus-wp-options-framework/) straight from your WordPress plugin page; <-- Coming Soon!
+1. Download the current release, add it to your project and follow the embed method.
+
+2. You can install the latest stable release from the [wordpress.org plugin page](https://wordpress.org/plugins/colossus-wp-options-framework/) straight from your WordPress plugin page; <-- Coming Soon!
 
 <!--
 2. Or you can download the [master.zip file](https://github.com/gambitph/Titan-Framework/archive/master.zip) then install it as a WordPress plugin;
@@ -51,6 +53,8 @@ curl -sS https://getcomposer.org/installer | php
 php composer.phar create-project gambitph/titan-framework titan-framework
 ```
 -->
+
+(See the Wiki for full details)[https://github.com/davidsneighbour/colossus-wp-options-framework/wiki].
 
 ## Developing
 
