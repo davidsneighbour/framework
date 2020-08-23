@@ -7,7 +7,7 @@ updates:
   - package-ecosystem: "composer"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
@@ -24,7 +24,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       time: "07:00"
       timezone: "Asia/Bangkok"
     allow:
