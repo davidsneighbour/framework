@@ -1423,6 +1423,8 @@ class titanscssc {
 		case "keyword":
 			$name = $value[1];
 			if (isset(self::$cssColors[$name])) {
+                // @todo check if this is PHP8 compliant
+                // @-operator no longer silences errors
 				@list($r, $g, $b, $a) = explode(',', self::$cssColors[$name]);
 				return isset($a)
 					? array('color', (int) $r, (int) $g, (int) $b, (int) $a)

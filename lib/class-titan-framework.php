@@ -283,7 +283,8 @@ class TitanFramework {
 
 		// Run this first to ensure that adminOptions carries all our admin page options.
 		$this->getInternalAdminOptions();
-
+        // @todo check if this is PHP8 compliant
+        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 		if ( array_key_exists( $optionName, $this->adminOptions ) ) {
 			return $this->adminOptions[ $optionName ];
 		} else {
@@ -531,6 +532,8 @@ class TitanFramework {
 		$value = false;
 
 		// Get the option value.
+        // @todo check if this is PHP8 compliant
+        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 		if ( array_key_exists( $optionName, $this->optionsUsed ) ) {
 			$option = $this->optionsUsed[ $optionName ];
 			$value = $option->getValue( $postID );
@@ -555,6 +558,8 @@ class TitanFramework {
 	 */
 	public function getOptions( $optionArray, $postID = null ) {
 		foreach ( $optionArray as $optionName => $originalValue ) {
+            // @todo check if this is PHP8 compliant
+            // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 			if ( array_key_exists( $optionName, $this->optionsUsed ) ) {
 				$optionArray[ $optionName ] = $this->getOption( $optionName, $postID );
 			}
@@ -577,6 +582,8 @@ class TitanFramework {
 	public function setOption( $optionName, $value, $postID = null ) {
 
 		// Get the option value.
+        // @todo check if this is PHP8 compliant
+        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 		if ( array_key_exists( $optionName, $this->optionsUsed ) ) {
 			$option = $this->optionsUsed[ $optionName ];
 			$option->setValue( $value, $postID );
@@ -807,7 +814,8 @@ class TitanFramework {
 					if ( ! empty( $option->settings['id'] ) ) {
 						$optionID = $option->settings['id'];
 						$themeModName = $this->optionNamespace . '_' . $option->settings['id'];
-
+                        // @todo check if this is PHP8 compliant
+                        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 						if ( ! array_key_exists( $themeModName, $value ) ) {
 							continue;
 						}

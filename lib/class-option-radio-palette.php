@@ -75,6 +75,8 @@ class TitanFrameworkOptionRadioPalette extends TitanFrameworkOption {
 		if ( empty( $value ) ) {
 			$value = 0;
 		}
+        // @todo check if this is PHP8 compliant
+        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 		if ( array_key_exists( $value, $this->settings['options'] ) ) {
 			return $this->settings['options'][ $value ];
 		}
