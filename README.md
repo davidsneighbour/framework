@@ -1,12 +1,7 @@
 [![Build Status](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework.svg?branch=main)](https://travis-ci.org/davidsneighbour/colossus-wp-options-framework)
 [![Slack](https://img.shields.io/badge/slack-join-blue)](https://colossus-slack.herokuapp.com/)
 [![Slack](https://img.shields.io/badge/slack-colossus--talk.slack.com-blue)](https://colossus-talk.slack.com/)
-
-<!--
-[![WordPress](https://img.shields.io/wordpress/v/titan-framework.svg)]()
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/titan-framework.svg)]()
-
--->
+![Psalm Static Analysis](https://github.com/colossus-wp/framework/workflows/Psalm%20Static%20analysis/badge.svg)
 
 Colossus WP Options Framework
 =============================
