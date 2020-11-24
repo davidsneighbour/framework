@@ -1,0 +1,24 @@
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+parameters:
+    checkTooWideReturnTypesInProtectedAndPublicMethods: true
+    tipsOfTheDay: false
+    checkUninitializedProperties: true
+    fileExtensions:
+        - php
+    level: max
+    paths:
+        - lib
+    scanFiles:
+        - titan-framework.php
+        - titan-framework-checker.php
+        - titan-framework-embedder.php
+    ignoreErrors:
+        - '#PHPDoc tag @var contains unknown class callback#'
+    reportUnmatchedIgnoredErrors: false
+    inferPrivatePropertyTypeFromConstructor: true
+    earlyTerminatingMethodCalls:
+        Nette\Application\UI\Presenter:
+            - redirect
+    earlyTerminatingFunctionCalls:
+        - redirect

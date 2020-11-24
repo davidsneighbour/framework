@@ -31,7 +31,9 @@
 	},
 	"require-dev": {
 		"phpunit/phpunit": "7.5.20",
-		"psalm/phar": "4.2"
+		"psalm/phar": "4.2.1",
+		"phpstan/phpstan": "0.12.57",
+		"phan/phan": "^3.2"
 	},
 	"scripts": {
         "post-install-cmd": [
@@ -44,4 +46,3 @@
         ]
 	}
 }
-
