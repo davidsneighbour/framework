@@ -329,6 +329,8 @@ class TitanFrameworkCustomizer {
 		if ( ! empty( $this->settings['panel_id'] ) ) {
 			$existingPanels = $wp_customize->panels();
 
+            // @todo check if this is PHP8 compliant
+            // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 			if ( ! array_key_exists( $this->settings['panel_id'], $existingPanels ) ) {
 				$wp_customize->add_panel( $this->settings['panel_id'], array(
 					'title' => $this->settings['panel'],
@@ -342,6 +344,8 @@ class TitanFrameworkCustomizer {
 		// Create the section
 		$existingSections = $wp_customize->sections();
 
+		// @todo check if this is PHP8 compliant
+        // https://wiki.php.net/rfc/deprecations_php_7_4#array_key_exists_with_objects
 		if ( ! array_key_exists( $this->settings['id'], $existingSections ) ) {
 			$wp_customize->add_section( $this->settings['id'], array(
 				'title' => $this->settings['name'],
