@@ -43,6 +43,6 @@ jobs:
           report_file: results.sarif
 
       - name: Upload Security Analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v1
+        uses: github/codeql-action/upload-sarif
         with:
           sarif_file: results.sarif
