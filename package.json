@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/davidsneighbour/colossus-wp-options-framework",
   "devDependencies": {
-    "all-contributors-cli": "6.19.0",
+    "all-contributors-cli": "6.20.0",
     "bower": "1.8.10",
     "cz-conventional-changelog": "3.3.0",
     "cz-customizable": "6.3.0",
