@@ -501,22 +501,22 @@ class TitanFrameworkOptionFont extends TitanFrameworkOption {
 			// These are all our parameters
 			var params = {
 				'font-family': family,
-				'font-type': $container.find(".tf-font-sel-family option[value='" + family + "']").parent().attr('class'),
-				'color': $container.find(".tf-font-sel-color").val(),
-				'font-size': $container.find(".tf-font-sel-size").val(),
-				'font-weight': $container.find(".tf-font-sel-weight").val(),
-				'font-style': $container.find(".tf-font-sel-style").val(),
-				'line-height': $container.find(".tf-font-sel-height").val(),
-				'letter-spacing': $container.find(".tf-font-sel-spacing").val(),
-				'text-transform': $container.find(".tf-font-sel-transform").val(),
-				'font-variant': $container.find(".tf-font-sel-variant").val(),
-				'text-shadow-location': $container.find(".tf-font-sel-location").val(),
-				'text-shadow-distance': $container.find(".tf-font-sel-distance").val(),
-				'text-shadow-blur': $container.find(".tf-font-sel-blur").val(),
-				'text-shadow-color': $container.find(".tf-font-sel-shadow-color").val(),
-				'text-shadow-opacity': $container.find(".tf-font-sel-opacity").val(),
-				'dark': $container.find(".tf-font-sel-dark").val(),
-				'text': $container.find("iframe").attr('data-preview-text')
+				'font-type': String($container.find(".tf-font-sel-family option[value='" + family + "']").parent().attr('class')),
+				'color': String($container.find(".tf-font-sel-color").val()),
+				'font-size': String($container.find(".tf-font-sel-size").val()),
+				'font-weight': String($container.find(".tf-font-sel-weight").val()),
+				'font-style': String($container.find(".tf-font-sel-style").val()),
+				'line-height': String($container.find(".tf-font-sel-height").val()),
+				'letter-spacing': String($container.find(".tf-font-sel-spacing").val()),
+				'text-transform': String($container.find(".tf-font-sel-transform").val()),
+				'font-variant': String($container.find(".tf-font-sel-variant").val()),
+				'text-shadow-location': String($container.find(".tf-font-sel-location").val()),
+				'text-shadow-distance': String($container.find(".tf-font-sel-distance").val()),
+				'text-shadow-blur': String($container.find(".tf-font-sel-blur").val()),
+				'text-shadow-color': String($container.find(".tf-font-sel-shadow-color").val()),
+				'text-shadow-opacity': String($container.find(".tf-font-sel-opacity").val()),
+				'dark': String($container.find(".tf-font-sel-dark").val()),
+				'text': String($container.find("iframe").attr('data-preview-text'))
 			}
 
 			// Update preview
