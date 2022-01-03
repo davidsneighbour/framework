@@ -9,7 +9,7 @@ if ( empty( $_GET ) ) {
 
 // Sanitize the inputs
 foreach ( $_GET as $key => $value ) {
-	$_GET[ $key ] = htmlspecialchars( $value );
+	$_GET[ $key ] = htmlspecialchars( $value, ENT_QUOTES );
 }
 
 // Set the defaults
