@@ -29,7 +29,7 @@
   "type": "library",
   "autoload": {
     "files": [
-      "titan-framework.php"
+      "./src/titan-framework.php"
     ]
   },
   "require": {

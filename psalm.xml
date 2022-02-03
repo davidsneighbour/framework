@@ -1,12 +1,6 @@
 <?xml version="1.0"?>
-<psalm errorLevel="1">
+<psalm>
     <projectFiles>
-        <directory name="lib"/>
-        <file name="titan-framework.php" />
-        <file name="titan-framework-checker.php" />
-        <file name="titan-framework-embedder.php" />
-        <ignoreFiles>
-            <directory name="vendor"/>
-        </ignoreFiles>
+        <directory name="src" />
     </projectFiles>
 </psalm>
