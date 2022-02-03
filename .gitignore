@@ -1,7 +1,3 @@
-# local setup
-package-lock.json
-wordpress
-
 # Created by https://www.toptal.com/developers/gitignore/api/node,bower,composer,visualstudiocode,phpstorm,netbeans,phpunit,cypressio,phpcodesniffer
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,bower,composer,visualstudiocode,phpstorm,netbeans,phpunit,cypressio,phpcodesniffer
 
