@@ -1,0 +1,77 @@
+version: "3.9"
+
+services:
+  # https://hub.docker.com/_/mysql
+  db:
+    image: mysql:5.7
+    container_name: "colossus-wordpress-db"
+    volumes:
+      - "./data/db:/var/lib/mysql"
+    restart: always
+    ports:
+      - "18766:3306"
+    command:
+      [
+        '--default_authentication_plugin=mysql_native_password',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci'
+      ]
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  # https://hub.docker.com/_/wordpress
+  wordpress:
+    image: wordpress:latest
+    depends_on:
+      - db
+    links:
+      - db
+    container_name: "colossus-wordpress"
+    volumes:
+      - "./public:/var/www/html"
+      - "./data/log:/var/log"
+      - "./data/certs:/etc/ssl/certs:ro"
+      - "./assets/config/default-ssl.conf:/etc/apache2/sites-available/default-ssl.conf:ro"
+      - "./assets/config/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh:ro"
+      - "./data/config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini"
+      - "./src:/var/www/html/wp-content/plugins/colossus-framework"
+      - "./theme:/var/www/html/wp-content/themes/colossus-theme"
+    ports:
+      - "443:443"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+
+  wpcli:
+    image: wordpress:cli
+    volumes:
+      - "./data/config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini"
+      - "./public:/var/www/html"
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+    depends_on:
+      - db
+      - wordpress
+
+  # https://hub.docker.com/r/phpmyadmin/phpmyadmin/
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    container_name: "colossus-phpmyadmin"
+    restart: always
+    ports:
+      - 8000:80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
